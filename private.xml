@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<root>
+	<!-- Specify gaming mouse -->
+	<devicevendordef>
+		<vendorname>LOGITECH</vendorname>
+		<vendorid>0x046d</vendorid>
+	</devicevendordef>
+	<deviceproductdef>
+		<productname>G600_MOUSE</productname>
+		<productid>0xc24a</productid>
+	</deviceproductdef>
+
+	<vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
+    <url type="file">/Applications/Google Chrome.app</url>
+  </vkopenurldef>
+
+	<item>
+		<name>My custom settings</name>
+		<item>
+			<name>Open Chrome when pressing 1 on G600 mouse</name>
+			<identifier>private.chrome_from_mouse</identifier>
+			<device_only>DeviceVendor::LOGITECH, DeviceProduct::G600_MOUSE</device_only>
+			<autogen>__KeyToKey__ KeyCode::1, KeyCode::VK_OPEN_URL_APP_Chrome</autogen>
+		</item>
+
+		<item>
+			<name>Mouse wheel back</name>
+			<identifier>private.mouse_wheel_back</identifier>
+			<device_only>DeviceVendor::LOGITECH, DeviceProduct::G600_MOUSE</device_only>
+			<autogen>__PointingButtonToKey__ PointingButton::BUTTON4, KeyCode::8, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
+		</item>
+
+		<item>
+			<name>Mouse wheel forward</name>
+			<identifier>private.mouse_wheel_forward</identifier>
+			<device_only>DeviceVendor::LOGITECH, DeviceProduct::G600_MOUSE</device_only>
+			<autogen>__PointingButtonToKey__ PointingButton::BUTTON5, KeyCode::9, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L</autogen>
+		</item>
+	</item>
+</root>
